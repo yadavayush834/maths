@@ -10,8 +10,8 @@ maths/
   day-01/
     q01-<slug>/
       question.md    # full problem statement
-      solution.py    # solution
-      testcases.py   # test cases (runnable)
+      sol.cpp        # simple solution (short names)
+      tc.txt         # testcases (input -> output)
     q02-<slug>/
       ...
   day-02/
@@ -22,16 +22,18 @@ maths/
 - Each question gets its own folder: `q01-...`, `q02-...` (numbering continues per day, or globally — keep per-day for simplicity).
 - Inside each question folder there are always 3 files:
   1. `question.md`
-  2. `testcases.py`
-  3. `solution.py`
+  2. `tc.txt`
+  3. `sol.cpp`
 
 ## How to run a question
 
 ```bash
 cd day-01/q01-sum-1-to-n
-python3 solution.py          # reads n from stdin, prints answer
-python3 testcases.py         # runs all test cases against solution.py
+g++ -O2 -std=c++17 sol.cpp -o sol
+echo 5 | ./sol          # 15
 ```
+
+Check testcases in `tc.txt` (`input -> output`).
 
 ## Progress log
 
@@ -42,5 +44,5 @@ python3 testcases.py         # runs all test cases against solution.py
 ## Workflow
 
 1. Give a short description / intro of the question.
-2. I expand it into a full `question.md`, add `testcases.py` and `solution.py` in a new `day-XX/qYY-...` folder.
-3. Everything is committed and pushed day-wise.
+2. I expand it into a full `question.md`, add `tc.txt` and `sol.cpp` in a new `day-XX/qYY-...` folder.
+3. Each file is committed + pushed one-by-one (more commits).
