@@ -39,7 +39,7 @@ Check testcases in `tc.txt` (`input -> output`).
 
 | Day | Date | Questions |
 |-----|------|-----------|
-| day-01 | 2026-09-22 | q01-sum-1-to-n: Sum all integers from 1 to n (n ≤ 10⁹, no loop) |
+| day-01 | 2026-09-22 | q01-sum-1-to-n: Sum all integers from 1 to n (n ≤ 10⁹, no loop), q02-sum-multiples-k-interval: Sum multiples of k in [L, R] |
 
 ## Workflow
 
